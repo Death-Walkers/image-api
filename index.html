@@ -1,557 +1,572 @@
-<html><head><base href="/" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Modern Chat Interface</title>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<html><head><base href="https://claude.ai/chat"><title>Sonnet AI - Advanced Conversation Interface</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-:root {
-  --primary: #36393f;
-  --secondary: #2f3136;
-  --accent: #5865f2;
-  --text: #dcddde;
-  --text-muted: #72767d;
-  --message-hover: #32353b;
-  --input-bg: #40444b;
-  --scrollbar-thumb: #202225;
-  --scrollbar-track: #2e3338;
-  --timestamp: #a3a6aa;
-}
+  :root {
+    --primary-color: #6200ee;
+    --secondary-color: #03dac6;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --on-surface-color: #e0e0e0;
+    --error-color: #cf6679;
+    --code-background: #2d2d2d;
+    --font-family: Arial, sans-serif;
+    --font-size: 16px;
+    --user-message-background: #2a2a2a; /* Slightly lighter than surface color */
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: 'gg sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: var(--secondary);
-  color: var(--text);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: 1.6;
+    color: var(--on-surface-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-.page-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background: var(--secondary);
-}
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.header {
-  background: var(--secondary);
-  padding: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.ai-select {
-  background: var(--input-bg);
-  color: var(--text);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: clamp(12px, 2vw, 14px);
-  cursor: pointer;
-  transition: background 0.2s;
-  max-width: 100%;
-}
-
-.ai-select:hover {
-  background: var(--accent);
-}
-
-.chat-container {
-  flex: 1;
-  background: var(--primary);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.messages {
-  flex: 1;
-  overflow-y: auto;
-  padding: clamp(16px, 3vw, 24px) clamp(12px, 2vw, 16px);
-  scroll-behavior: smooth;
-}
-
-.messages::-webkit-scrollbar {
-  width: 8px;
-}
-
-.messages::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
-}
-
-.messages::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border-radius: 4px;
-}
-
-.message-group {
-  margin-bottom: clamp(12px, 2vw, 16px);
-  padding: 2px clamp(12px, 2vw, 16px);
-  transition: background 0.2s;
-}
-
-.message-group:hover {
-  background: var(--message-hover);
-}
-
-.message-header {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 4px;
-  flex-wrap: wrap;
-}
-
-.message-author {
-  font-size: clamp(14px, 2.5vw, 1rem);
-  font-weight: 500;
-  margin-right: 8px;
-}
-
-.user-author {
-  color: #3498db;
-}
-
-.ai-author {
-  color: #2ecc71;
-}
-
-.message-timestamp {
-  color: var(--timestamp);
-  font-size: clamp(10px, 1.5vw, 0.75rem);
-}
-
-.message-content {
-  color: var(--text);
-  font-size: clamp(14px, 2.5vw, 1rem);
-  line-height: 1.375rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.message-content pre {
-  background: var(--input-bg);
-  padding: 12px;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-.message-content code {
-  background: var(--input-bg);
-  padding: 2px 4px;
-  border-radius: 3px;
-  font-family: 'Consolas', 'Monaco', monospace;
-}
-
-.message-content blockquote {
-  border-left: 4px solid var(--accent);
-  padding-left: 8px;
-  margin: 8px 0;
-  color: var(--text-muted);
-}
-
-.message-content p {
-  margin: 8px 0;
-}
-
-.message-content ul, 
-.message-content ol {
-  margin: 8px 0;
-  padding-left: 20px;
-}
-
-.message-content .katex-display {
-  margin: 1em 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.message-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.message-content a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.message-content a:hover {
-  text-decoration: underline;
-}
-
-.input-container {
-  background: var(--primary);
-  padding: 0 clamp(12px, 2vw, 16px) clamp(16px, 3vw, 24px);
-  width: 100%;
-}
-
-.input-wrapper {
-  background: var(--input-bg);
-  border-radius: 8px;
-  padding: 0 clamp(12px, 2vw, 16px);
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-}
-
-#message-input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  color: var(--text);
-  font-size: clamp(14px, 2.5vw, 1rem);
-  padding: 12px 0;
-  max-height: 40vh;
-  min-height: 44px;
-  resize: none;
-  line-height: 1.375rem;
-  width: 100%;
-}
-
-#message-input:focus {
-  outline: none;
-}
-
-#message-input::placeholder {
-  color: var(--text-muted);
-}
-
-#send-button {
-  background: transparent;
-  border: none;
-  color: var(--accent);
-  padding: clamp(8px, 1.5vw, 12px);
-  cursor: pointer;
-  transition: color 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#send-button:hover {
-  color: #7984f5;
-}
-
-#send-button svg {
-  width: clamp(20px, 4vw, 24px);
-  height: clamp(20px, 4vw, 24px);
-  fill: currentColor;
-}
-
-.typing-indicator {
-  padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 16px);
-  color: var(--text-muted);
-  font-size: clamp(12px, 2vw, 0.875rem);
-  opacity: 0;
-  transition: opacity 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-@media screen and (max-width: 768px) {
   .header {
-    padding: 12px;
-    gap: 10px;
+    background-color: var(--surface-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
-  
-  .message-group {
-    padding: 2px 12px;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    flex: 1;
   }
-  
+
+  .logo-ai {
+    color: white;
+    margin-right: auto;
+  }
+
+  .logo-ai .i {
+    display: inline-block;
+    transform: rotate(-10deg);
+  }
+
+  .logo-sonnet {
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-55%);
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .icon-button {
+    background: none;
+    border: none;
+    color: var(--on-surface-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+
+  .icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .chat-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--surface-color);
+  }
+
+  .message {
+    max-width: 80%;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    animation: fadeIn 0.3s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .user-message {
+    align-self: flex-end;
+    background-color: var(--user-message-background);
+    color: var(--on-surface-color);
+    border-radius: 1rem;
+  }
+
+  .sonnet-message {
+    align-self: flex-start;
+    background-color: var(--surface-color);
+    color: var(--on-surface-color);
+    border-radius: 1rem;
+  }
+
+  .input-area {
+    display: flex;
+    padding: 1rem;
+    background-color: var(--surface-color);
+    border-top: none;
+  }
+
   .input-container {
-    padding: 0 12px 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
   }
-}
 
-@media screen and (max-width: 480px) {
-  .header {
-    padding: 8px;
-    gap: 8px;
+  #user-input {
+    width: 100%;
+    padding: 0.7rem 2.5rem 0.7rem 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: rgba(255,255,255,0.1);
+    color: var(--on-surface-color);
+    font-size: 0.9rem;
+    resize: none;
+    outline: none;
+    transition: all 0.3s ease;
+    max-height: calc(1.6em * 8 + 1.4rem);
+    overflow-y: auto;
   }
-  
-  .ai-select {
-    padding: 6px 10px;
-    font-size: 12px;
+
+  #user-input::-webkit-scrollbar {
+    width: 8px;
   }
-  
-  .message-group {
-    padding: 2px 8px;
+
+  #user-input::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
   }
-  
-  .input-container {
-    padding: 0 8px 12px;
+
+  #user-input::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
   }
-}
 
-.typing-indicator .dots {
-  display: flex;
-  gap: 4px;
-}
+  #user-input:focus {
+    background-color: rgba(255,255,255,0.15);
+  }
 
-.dot {
-  width: 6px;
-  height: 6px;
-  background: var(--text-muted);
-  border-radius: 50%;
-  animation: bounce 1.4s infinite ease-in-out;
-}
+  #send-button {
+    position: absolute;
+    right: 0.3rem;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
 
-.dot:nth-child(1) { animation-delay: -0.32s; }
-.dot:nth-child(2) { animation-delay: -0.16s; }
+  #send-button:hover {
+    background-color: #04b9a8;
+  }
 
-@keyframes bounce {
-  0%, 80%, 100% { transform: scale(0); }
-  40% { transform: scale(1); }
-}
+  #send-button svg {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+    transform: rotate(-90deg);
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    animation: fadeIn 0.3s ease;
+  }
+
+  .modal-content {
+    background-color: var(--surface-color);
+    margin: 15% auto;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: var(--on-surface-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #system-prompt {
+    width: 100%;
+    height: 100px;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: rgba(255,255,255,0.1);
+    color: var(--on-surface-color);
+    border: none;
+    border-radius: 0.5rem;
+    resize: vertical;
+  }
+
+  .settings-group {
+    margin-top: 1rem;
+  }
+
+  .settings-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .settings-group select {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--surface-color);
+    color: var(--on-surface-color);
+    border: 1px solid var(--on-surface-color);
+    border-radius: 0.3rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+  }
+
+  .settings-group select:hover {
+    border-color: var(--secondary-color);
+  }
+
+  .settings-group select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(3, 218, 198, 0.2);
+  }
+
+  #update-settings-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  #update-settings-button:hover {
+    background-color: #04b9a8;
+  }
+
+  /* Message formatting styles */
+  .message p {
+    margin-bottom: 1rem;
+  }
+
+  .message strong {
+    font-weight: 600;
+  }
+
+  .message em {
+    font-style: italic;
+  }
+
+  .message ul, .message ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .message code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--code-background);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    font-size: 0.9em;
+  }
+
+  .message pre {
+    background-color: var(--code-background);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+
+  .message pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .message blockquote {
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 1rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .message a {
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+
+  .message a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .message {
+      max-width: 90%;
+    }
+  }
 </style>
 </head>
 <body>
-  <div class="page-wrapper">
-    <div class="container">
-      <div class="header">
-        <select class="ai-select" id="modelSelect">
-          <option value="" disabled>Select AI Model</option>
+  <div class="app-container">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-ai">A<span class="i">I</span></span>
+        <span class="logo-sonnet">Sonnet</span>
+      </div>
+      <div class="header-buttons">
+        <button class="icon-button" id="clear-chat" title="Clear Chat">🗑️</button>
+        <button class="icon-button" id="open-settings" title="Settings">⚙️</button>
+      </div>
+    </header>
+
+    <div class="chat-container" id="chat-container" style="padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; max-width: 800px; margin: 0 auto;">
+</div>
+  
+    <form class="input-area" id="chat-form">
+      <div class="input-container">
+        <textarea id="user-input" placeholder="Type your message here..." rows="1"></textarea>
+        <button id="send-button" type="submit" style="background-color: white;">
+  <svg viewBox="0 0 24 24">
+    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="black"></path>
+  </svg>
+</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="settings-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Settings</h2>
+      <div class="settings-group">
+        <label for="font-family">Font Family:</label>
+        <select id="font-family">
+          <option value="Arial, sans-serif">Arial</option>
+          <option value="'Times New Roman', serif">Times New Roman</option>
+          <option value="'Courier New', monospace">Courier New</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="Verdana, sans-serif">Verdana</option>
         </select>
-        <h2>Chat</h2>
-        <button class="ai-select" id="clearChat">Clear Chat</button>
-        <button class="ai-select" id="clearMemory">Clear Memory</button>
       </div>
-      
-      <div class="chat-container">
-        <div class="messages" id="messages">
-          <!-- Messages will be inserted here -->
-        </div>
-        
-        <div class="typing-indicator" id="typing-indicator">
-          <span>AI is typing</span>
-          <div class="dots">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-        </div>
-        
-        <div class="input-container">
-          <div class="input-wrapper">
-            <textarea 
-              id="message-input" 
-              placeholder="Send a message..."
-              rows="1"
-            ></textarea>
-            <button id="send-button">
-              <svg viewBox="0 0 24 24">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-              </svg>
-            </button>
-          </div>
-        </div>
+      <div class="settings-group">
+        <label for="font-size">Font Size:</label>
+        <select id="font-size">
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="16px" selected="">16px</option>
+          <option value="18px">18px</option>
+          <option value="20px">20px</option>
+        </select>
       </div>
+      <h3>System Prompt</h3>
+      <textarea id="system-prompt" placeholder="Enter custom system prompt here (optional)"></textarea>
+      <button id="update-settings-button">Update Settings</button>
     </div>
   </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const messagesContainer = document.getElementById('messages');
-  const messageInput = document.getElementById('message-input');
-  const sendButton = document.getElementById('send-button');
-  const modelSelect = document.getElementById('modelSelect');
-  const typingIndicator = document.getElementById('typing-indicator');
-  const clearChatButton = document.getElementById('clearChat');
-  const clearMemoryButton = document.getElementById('clearMemory');
+  <script>
+    const chatContainer = document.getElementById('chat-container');
+    const chatForm = document.getElementById('chat-form');
+    const userInput = document.getElementById('user-input');
+    const systemPrompt = document.getElementById('system-prompt');
+    const modal = document.getElementById('settings-modal');
+    const openSettingsBtn = document.getElementById('open-settings');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const updateSettingsButton = document.getElementById('update-settings-button');
+    const clearChatBtn = document.getElementById('clear-chat');
+    const fontFamilySelect = document.getElementById('font-family');
+    const fontSizeSelect = document.getElementById('font-size');
 
-  let conversationHistory = [];
+    let currentSystemPrompt = "";
 
-  fetch('https://api.llmplayground.net/v1/models')
-    .then(response => response.json())
-    .then(data => {
-      data.data.forEach(model => {
-        const option = document.createElement('option');
-        option.value = model.id;
-        option.textContent = model.id;
-        modelSelect.appendChild(option);
-      });
-      modelSelect.value = 'llama-3-70b-chat-turbo';
-    })
-    .catch(error => console.error('Error fetching AI models:', error));
+    systemPrompt.value = currentSystemPrompt;
 
-  marked.setOptions({
-    breaks: true,
-    gfm: true,
-    headerIds: false,
-    mangle: false,
-    sanitize: false,
-    silent: true
-  });
+    openSettingsBtn.onclick = function() {
+      modal.style.display = "block";
+    }
 
-  function formatTimestamp() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    return `${hours}:${minutes}`;
-  }
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
 
-  function processContent(content) {
-    content = content.replace(/\\\((.*?)\\\)/g, (match, latex) => {
-      try {
-        return katex.renderToString(latex, {displayMode: false});
-      } catch (e) {
-        console.error('LaTeX Error:', e);
-        return match;
+    window.onclick = function(event) {
+""
+      if (event.target == modal) {
+        modal.style.display = "none";
       }
-    });
-    
-    content = content.replace(/\\\[(.*?)\\\]/g, (match, latex) => {
-      try {
-        return katex.renderToString(latex, {displayMode: true});
-      } catch (e) {
-        console.error('LaTeX Error:', e);
-        return match;
-      }
+    }
+
+    updateSettingsButton.addEventListener('click', function() {
+      currentSystemPrompt = systemPrompt.value;
+      document.documentElement.style.setProperty('--font-family', fontFamilySelect.value);
+      document.documentElement.style.setProperty('--font-size', fontSizeSelect.value);
+      addMessage('system', 'Settings updated.');
+      modal.style.display = "none";
     });
 
-    try {
-      return marked.parse(content);
-    } catch (e) {
-      console.error('Markdown Error:', e);
-      return content;
-    }
-  }
+    clearChatBtn.addEventListener('click', function() {
+      chatContainer.innerHTML = '';
+    });
 
-  function addMessage(content, isUser = false) {
-    const messageGroup = document.createElement('div');
-    messageGroup.className = 'message-group';
-
-    const messageHeader = document.createElement('div');
-    messageHeader.className = 'message-header';
-
-    const author = document.createElement('span');
-    author.className = `message-author ${isUser ? 'user-author' : 'ai-author'}`;
-    author.textContent = isUser ? 'You' : 'AI';
-
-    const timestamp = document.createElement('span');
-    timestamp.className = 'message-timestamp';
-    timestamp.textContent = formatTimestamp();
-
-    const messageContent = document.createElement('div');
-    messageContent.className = 'message-content';
-    messageContent.innerHTML = processContent(content);
-
-    messageHeader.appendChild(author);
-    messageHeader.appendChild(timestamp);
-    messageGroup.appendChild(messageHeader);
-    messageGroup.appendChild(messageContent);
-    messagesContainer.appendChild(messageGroup);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-  }
-
-  function showTypingIndicator() {
-    typingIndicator.style.opacity = '1';
-  }
-
-  function hideTypingIndicator() {
-    typingIndicator.style.opacity = '0';
-  }
-
-  async function sendMessageToAI(message) {
-    const model = modelSelect.value || 'llama-3-70b-chat-turbo';
-    
-    try {
-      const response = await fetch('https://api.llmplayground.net/v1/chat/completions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: model,
-          messages: [
-            { role: 'system', content: 'You are a helpful AI assistant.' },
-            ...conversationHistory,
-            { role: 'user', content: message }
-          ],
-          max_tokens: 2048,
-          temperature: 0.7,
-        }),
-      });
-
-      const data = await response.json();
-      return data.choices[0].message.content;
-    } catch (error) {
-      console.error('Error:', error);
-      return 'Sorry, I encountered an error while processing your request.';
-    }
-  }
-
-  async function handleUserMessage() {
-    const message = messageInput.value.trim();
-    if (!message) return;
-
-    addMessage(message, true);
-    messageInput.value = '';
-    messageInput.style.height = 'auto';
-    
-    conversationHistory.push({role: 'user', content: message});
-
-    showTypingIndicator();
-    const aiResponse = await sendMessageToAI(message);
-    hideTypingIndicator();
-
-    addMessage(aiResponse, false);
-    conversationHistory.push({role: 'assistant', content: aiResponse});
-  }
-
-  function clearChat() {
-    messagesContainer.innerHTML = '';
-    addMessage("Chat cleared. How can I help you?", false);
-  }
-
-  function clearMemory() {
-    conversationHistory = [];
-    addMessage("Memory cleared. Starting fresh conversation.", false);
-  }
-
-  sendButton.addEventListener('click', handleUserMessage);
-  
-  messageInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    chatForm.addEventListener('submit', async function(e) {
       e.preventDefault();
-      handleUserMessage();
+      sendMessage();
+    });
+
+    userInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+
+    async function sendMessage() {
+      const message = userInput.value.trim();
+      if (message) {
+        addMessage('user', message);
+        userInput.value = '';
+        await getSonnetResponse(message);
+      }
     }
-  });
 
-  messageInput.addEventListener('input', () => {
-    messageInput.style.height = 'auto';
-    messageInput.style.height = Math.min(messageInput.scrollHeight, 400) + 'px';
-  });
+    function addMessage(sender, text) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${sender}-message`;
+      messageDiv.innerHTML = formatMessage(text);
+      chatContainer.appendChild(messageDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
 
-  clearChatButton.addEventListener('click', clearChat);
-  clearMemoryButton.addEventListener('click', clearMemory);
+    function formatMessage(text) {
+      // Convert markdown-style formatting to HTML
+      return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/`([^`]+)`/g, '<code>$1</code>')
+        .replace(/```(\w+)?\n([\s\S]+?)```/g, function(match, language, code) {
+          return `<pre><code class="language-${language || ''}">${code.trim()}</code></pre>`;
+        })
+        .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>')
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/\n/g, '<br>')
+        .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
+        .replace(/^\s*[-+*]\s+(.+)/gm, '<ul><li>$1</li></ul>')
+        .replace(/^\s*\d+\.\s+(.+)/gm, '<ol><li>$1</li></ol>')
+        .replace(/^(.+)$/gm, '<p>$1</p>')
+        .replace(/<\/p><p><\/p><p>/g, '</p><p>');
+    }
 
-  addMessage("Hello! I'm your AI assistant. How can I help you today?", false);
-});
-</script>
+    async function getSonnetResponse(userMessage) {
+      let retryCount = 0;
+      const maxRetries = 5;
+
+      async function attempt() {
+        try {
+          const response = await fetch('/api/sonnet', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+              user_input: userMessage,
+              system_prompt: currentSystemPrompt
+            }),
+          });
+          
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          
+          const data = await response.json();
+          addMessage('sonnet', data.response);
+        } catch (error) {
+          console.error('Error:', error);
+          if (retryCount < maxRetries) {
+            retryCount++;
+            addMessage('sonnet', `Sorry, I encountered an error while processing your request. Trying again... (Attempt ${retryCount}/${maxRetries})`);
+            await attempt();
+          } else {
+            addMessage('sonnet', 'I am sorry, there probably is an internal error related to this chat session. I suggest you to press on the trash icon at the top right of the screen to refresh the chat and try again.');
+          }
+        }
+      }
+
+      await attempt();
+    }
+
+    // Auto-expand textarea
+    function autoExpand(element) {
+      element.style.height = 'auto';
+      element.style.height = Math.min(element.scrollHeight, parseInt(getComputedStyle(element).maxHeight)) + 'px';
+    }
+
+    userInput.addEventListener('input', function() {
+      autoExpand(this);
+    });
+
+    systemPrompt.addEventListener('input', function() {
+      autoExpand(this);
+    });
+  </script>
 </body></html>
