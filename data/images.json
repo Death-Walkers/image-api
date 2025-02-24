@@ -1,113 +1,39 @@
 {
   "images": [
     {
-      "startdate": "20241110",
-      "fullstartdate": "202411100800",
-      "enddate": "20241111",
       "url": "https://i.imgur.com/8vAzp2I.jpeg",
-      "urlbase": "https://cn.bing.com/th?id=OHR.YucatanFlamingos_EN-US4470232432",
       "copyright": "Ashlynn Repository",
-      "copyrightlink": "https://t.me/Ashlynn_Repository",
-      "title": "No title",
-      "quiz": "https://www.bing.com/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20241110_YucatanFlamingos%22&FORM=HPQUIZ",
-      "wp": true,
-      "hsh": "f4582ab5feca2af29cd8a960b867d35d",
-      "drk": 1,
-      "top": 1,
-      "bot": 1,
-      "hs": []
+      "copyrightlink": "https://t.me/Ashlynn_Repository"
     },
     {
-      "startdate": "20241109",
-      "fullstartdate": "202411090800",
-      "enddate": "20241110",
       "url": "https://i.imgur.com/U0iVEE7.jpeg",
-      "urlbase": "/th?id=OHR.MoroccoMilkyWay_EN-US4411505209",
       "copyright": "Ashlynn Repository",
-      "copyrightlink": "https://t.me/Ashlynn_Repository",
-      "title": "No title",
-      "quiz": "/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20241109_MoroccoMilkyWay%22&FORM=HPQUIZ",
-      "wp": true,
-      "hsh": "90905c1df995417c8aa0e1d3a9b5bece",
-      "drk": 1,
-      "top": 1,
-      "bot": 1,
-      "hs": []
+      "copyrightlink": "https://t.me/Ashlynn_Repository"
     },
     {
-      "startdate": "20241108",
-      "fullstartdate": "202411080800",
-      "enddate": "20241109",
       "url": "https://i.imgur.com/aMjEndC.jpeg",
-      "urlbase": "/th?id=OHR.GlacialRivers_EN-US4356459123",
       "copyright": "Ashlynn Repository",
-      "copyrightlink": "https://t.me/Ashlynn_Repository",
-      "title": "No title",
-      "quiz": "/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20241108_GlacialRivers%22&FORM=HPQUIZ",
-      "wp": true,
-      "hsh": "fe194686369d4960722b11db15c619fa",
-      "drk": 1,
-      "top": 1,
-      "bot": 1,
-      "hs": []
+      "copyrightlink": "https://t.me/Ashlynn_Repository"
     },
     {
-      "startdate": "20241107",
-      "fullstartdate": "202411070800",
-      "enddate": "20241108",
       "url": "https://i.imgur.com/995LALF.jpeg",
-      "urlbase": "/th?id=OHR.CanadaWolves_EN-US4285635290",
       "copyright": "Ashlynn Repository",
-      "copyrightlink": "https://t.me/Ashlynn_Repository",
-      "title": "No title",
-      "quiz": "/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20241107_CanadaWolves%22&FORM=HPQUIZ",
-      "wp": true,
-      "hsh": "9e4c296ef9540e279595aba4ea24453b",
-      "drk": 1,
-      "top": 1,
-      "bot": 1,
-      "hs": []
-    },
-        {
-      "startdate": "2024117",
-      "fullstartdate": "20241170800",
-      "enddate": "2024108",
-      "url": "https://i.imgur.com/kGcylrh.jpeg",
-      "urlbase": "/th?id=OHR.CanadaWolves_EN-US42856290",
-      "copyright": "Ashlynn Repository",
-      "copyrightlink": "https://t.me/Ashlynn_Repository",
-      "title": "No title",
-      "quiz": "/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20241107_CanadaWolves%22&FORM=HPQUIZ",
-      "wp": true,
-      "hsh": "9e4c296ef9540e279595aba4ea24453b",
-      "drk": 1,
-      "top": 1,
-      "bot": 1,
-      "hs": []
+      "copyrightlink": "https://t.me/Ashlynn_Repository"
     },
     {
-      "startdate": "20241106",
-      "fullstartdate": "202411060800",
-      "enddate": "20241107",
-      "url": "https://i.imgur.com/g4gEauO.jpeg",
-      "urlbase": "/th?id=OHR.ShiShiBeach_EN-US4231457607",
+      "url": "https://i.imgur.com/kGcylrh.jpeg",
       "copyright": "Ashlynn Repository",
-      "copyrightlink": "https://t.me/Ashlynn_Repository",
-      "title": "No title",
-      "quiz": "/search?q=Bing+homepage+quiz&filters=WQOskey:%22HPQuiz_20241106_ShiShiBeach%22&FORM=HPQUIZ",
-      "wp": true,
-      "hsh": "77d010cf7463bf56d5cec76d992333c9",
-      "drk": 1,
-      "top": 1,
-      "bot": 1,
-      "hs": []
+      "copyrightlink": "https://t.me/Ashlynn_Repository"
+    },
+    {
+      "url": "https://i.imgur.com/g4gEauO.jpeg",
+      "copyright": "Ashlynn Repository",
+      "copyrightlink": "https://t.me/Ashlynn_Repository"
     }
   ],
   "tooltips": {
     "loading": "Loading...",
     "previous": "Previous image",
     "next": "Next image",
-    "walle": "This image is not available to download as wallpaper.",
-    "walls": "Download this image. Use of this image is restricted to wallpaper only."
   }
 }
