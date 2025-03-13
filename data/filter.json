@@ -1,0 +1,249 @@
+{
+  "status": 200,
+  "successful": "success",
+  "data": {
+    "code": 200,
+    "message": "Success",
+    "result": {
+      "Art": [
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F4.webp",
+          "display_image": "",
+          "id": 4,
+          "style": "Janpan Anime",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F7.webp",
+          "display_image": "https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F7-origin.webp,https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F7.webp",
+          "id": 7,
+          "style": "Pixel Art",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F1.webp",
+          "display_image": "https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F1-origin.webp,https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F1.webp",
+          "id": 1,
+          "style": "Watercolor",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F2.webp",
+          "display_image": "https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F2-origin.webp,https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F2.webp",
+          "id": 2,
+          "style": "Cartoon 1",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F26.webp",
+          "display_image": "",
+          "id": 26,
+          "style": "Cartoon 2",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F27.webp",
+          "display_image": "",
+          "id": 27,
+          "style": "Cartoon 3",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F5.webp",
+          "display_image": "https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F5-origin.webp,https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F5.webp",
+          "id": 5,
+          "style": "Epic Manga",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F20.webp",
+          "display_image": "https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F20-origin.webp,https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F20.webp",
+          "id": 20,
+          "style": "Oil Painting",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F30.webp",
+          "display_image": "",
+          "id": 30,
+          "style": "Monet",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F31.webp",
+          "display_image": "",
+          "id": 31,
+          "style": "Sketch",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F14.webp",
+          "display_image": "",
+          "id": 14,
+          "style": "3D Cartoon 1",
+          "style_cls": "Art"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F25.webp",
+          "display_image": "",
+          "id": 25,
+          "style": "Parchment",
+          "style_cls": "Art"
+        }
+      ],
+      "Christmas": [
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F16.webp",
+          "display_image": "",
+          "id": 16,
+          "style": "Christmas 1",
+          "style_cls": "Christmas"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F17.webp",
+          "display_image": "",
+          "id": 17,
+          "style": "Christmas 2",
+          "style_cls": "Christmas"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F18.webp",
+          "display_image": "",
+          "id": 18,
+          "style": "Christmas 3",
+          "style_cls": "Christmas"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F19.webp",
+          "display_image": "",
+          "id": 19,
+          "style": "Christmas 4",
+          "style_cls": "Christmas"
+        }
+      ],
+      "Creative": [
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F3.webp",
+          "display_image": "https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F3-origin.webp,https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F3.webp",
+          "id": 3,
+          "style": "PS2",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F13.webp",
+          "display_image": "",
+          "id": 13,
+          "style": "Clay",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F24.webp",
+          "display_image": "",
+          "id": 24,
+          "style": "Lego",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F32.webp",
+          "display_image": "",
+          "id": 32,
+          "style": "Toy",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F6.webp",
+          "display_image": "",
+          "id": 6,
+          "style": "Barbie",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F15.webp",
+          "display_image": "https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F15-origin.webp,https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F15.webp",
+          "id": 15,
+          "style": "Crochet",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F21.webp",
+          "display_image": "",
+          "id": 21,
+          "style": "Glowing",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F22.webp",
+          "display_image": "https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F22-origin.webp,https://pub-static.aiease.ai/aieaseExample%2FaifilterDisplay%2F22.webp",
+          "id": 22,
+          "style": "Futuristic",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F23.webp",
+          "display_image": "",
+          "id": 23,
+          "style": "Star",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F28.webp",
+          "display_image": "",
+          "id": 28,
+          "style": "Underwater",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F29.webp",
+          "display_image": "",
+          "id": 29,
+          "style": "Beach",
+          "style_cls": "Creative"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F33.webp",
+          "display_image": "",
+          "id": 33,
+          "style": "Cyberpunk",
+          "style_cls": "Creative"
+        }
+      ],
+      "Halloween": [
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F8.webp",
+          "display_image": "",
+          "id": 8,
+          "style": "Monster",
+          "style_cls": "Halloween"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F9.webp",
+          "display_image": "",
+          "id": 9,
+          "style": "Ghost",
+          "style_cls": "Halloween"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F10.webp",
+          "display_image": "",
+          "id": 10,
+          "style": "Voorhees",
+          "style_cls": "Halloween"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F11.webp",
+          "display_image": "",
+          "id": 11,
+          "style": "Clown",
+          "style_cls": "Halloween"
+        },
+        {
+          "avatar": "https://pub-static.aiease.ai/aieaseExample%2FaifilterAvatar%2F12.webp",
+          "display_image": "",
+          "id": 12,
+          "style": "Krueger",
+          "style_cls": "Halloween"
+        }
+      ]
+    }
+  }
+}
