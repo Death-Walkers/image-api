@@ -1,0 +1,522 @@
+{
+  "action": "success",
+  "status": 200,
+  "styles": {
+    "1": {
+      "name": "Synthwave",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/synthwave.jpg"
+    },
+    "2": {
+      "name": "Ukiyoe",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/ukiyoe.jpg"
+    },
+    "3": {
+      "name": "No Style",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/no-style-1.jpg"
+    },
+    "4": {
+      "name": "Steampunk",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/steampunk.jpg"
+    },
+    "5": {
+      "name": "Fantasy Art",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/fantasy-art.jpg"
+    },
+    "6": {
+      "name": "Vibrant",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/vibrant.jpg"
+    },
+    "7": {
+      "name": "HD",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/hd.jpg"
+    },
+    "8": {
+      "name": "Pastel",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/pastel.jpg"
+    },
+    "9": {
+      "name": "Psychic",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/psychic-dystopia.jpg"
+    },
+    "10": {
+      "name": "Dark Fantasy",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/dark-fantasy.jpg"
+    },
+    "11": {
+      "name": "Mystical",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/mystical_2.jpg"
+    },
+    "13": {
+      "name": "Baroque",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/budha.jpg"
+    },
+    "14": {
+      "name": "Etching",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/etching_tn.jpeg"
+    },
+    "15": {
+      "name": "S.Dali",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/salvador.jpg"
+    },
+    "16": {
+      "name": "Wuhtercuhler",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/watercolor.jpg"
+    },
+    "17": {
+      "name": "Provenance",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/provenance-thumbnail-8.jpeg"
+    },
+    "18": {
+      "name": "Rose Gold",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/rose-gold-thumbnail.jpeg"
+    },
+    "19": {
+      "name": "Moonwalker",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/moonwalker.jpg"
+    },
+    "20": {
+      "name": "Blacklight",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/backlight.jpg"
+    },
+    "21": {
+      "name": "Psychedelic",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/lisa.jpg"
+    },
+    "22": {
+      "name": "Ghibli",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/ghibli.jpg"
+    },
+    "23": {
+      "name": "Surreal",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/fuchs_thumbnail.jpeg"
+    },
+    "24": {
+      "name": "Love",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/love.jpg"
+    },
+    "25": {
+      "name": "Death",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/death.jpg"
+    },
+    "26": {
+      "name": "Robots",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/robots.jpg"
+    },
+    "27": {
+      "name": "Radioactive",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/radioactive.jpeg"
+    },
+    "28": {
+      "name": "Melancholic",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/melancholic.jpeg"
+    },
+    "29": {
+      "name": "Transitory",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/transitory.jpeg"
+    },
+    "31": {
+      "name": "Toasty",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/toasty.jpeg"
+    },
+    "32": {
+      "name": "Realistic",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/realistic.jpeg"
+    },
+    "34": {
+      "name": "Arcane",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/arcane.jpeg"
+    },
+    "35": {
+      "name": "Throwback",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/throwback.jpg"
+    },
+    "36": {
+      "name": "Daydream",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/daydream.jpeg"
+    },
+    "37": {
+      "name": "Surreal",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/surreal.jpg"
+    },
+    "38": {
+      "name": "Ink",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/ink.png"
+    },
+    "39": {
+      "name": "Pandora",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/pandora.jpeg"
+    },
+    "40": {
+      "name": "Malevolent",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/malevolent.jpeg"
+    },
+    "41": {
+      "name": "Street Art",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/streetart.jpg"
+    },
+    "42": {
+      "name": "Unrealistic",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/unrealistic.jpeg"
+    },
+    "45": {
+      "name": "Comic",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/comic.png"
+    },
+    "46": {
+      "name": "Anime",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/anime.png"
+    },
+    "47": {
+      "name": "Line-Art",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/lineart.png"
+    },
+    "48": {
+      "name": "Gouache",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/gouache.png"
+    },
+    "49": {
+      "name": "Polygon",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/polygon.png"
+    },
+    "50": {
+      "name": "Paint",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/paint.png"
+    },
+    "52": {
+      "name": "HDR",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/hdr.png"
+    },
+    "53": {
+      "name": "Analogue",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/analogue.png"
+    },
+    "54": {
+      "name": "Retro-Futurism",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/retrofuturism.png"
+    },
+    "55": {
+      "name": "Isometric",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/isometric.jpeg"
+    },
+    "57": {
+      "name": "Bad Trip",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/badtrip.jpeg"
+    },
+    "58": {
+      "name": "Cartoonist",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/cartoonist.jpeg"
+    },
+    "60": {
+      "name": "Vector",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/vector.jpeg"
+    },
+    "61": {
+      "name": "Fantastical",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/fantastical.jpeg"
+    },
+    "63": {
+      "name": "Spectral",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/spectral.jpeg"
+    },
+    "65": {
+      "name": "Diorama",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/diorama.jpeg"
+    },
+    "67": {
+      "name": "Abstract",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/abstract.jpeg"
+    },
+    "68": {
+      "name": "Flora",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/flora.png"
+    },
+    "71": {
+      "name": "Soft Touch",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/softtouch.png"
+    },
+    "73": {
+      "name": "Festive",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/festive2.png"
+    },
+    "74": {
+      "name": "Splatter",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/splatter.png"
+    },
+    "76": {
+      "name": "Figure",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/figure.jpeg"
+    },
+    "77": {
+      "name": "Expressionism",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/expressionism.png"
+    },
+    "78": {
+      "name": "Realistic v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/realistic_v2.jpg"
+    },
+    "80": {
+      "name": "Anime v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/animev2.jpg"
+    },
+    "83": {
+      "name": "Expressionism v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/expressionism2.png"
+    },
+    "84": {
+      "name": "Dreamland v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/buliojourney_v2.jpg"
+    },
+    "94": {
+      "name": "Gloomy v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/gloomy_v2.jpg"
+    },
+    "95": {
+      "name": "The Cut v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/the_cut.jpg"
+    },
+    "96": {
+      "name": "The Bulio Cut v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/the_cut_bulio.jpg"
+    },
+    "97": {
+      "name": "Dreamwave v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/dreamwave_v2.jpg"
+    },
+    "100": {
+      "name": "Ink v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/ink_v2.jpg"
+    },
+    "103": {
+      "name": "Horror v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/horror_v2.jpg"
+    },
+    "104": {
+      "name": "Horror Cut v2.0",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/horror_cut_v2.0.jpg"
+    },
+    "105": {
+      "name": "Horror Cut v2.1",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/horror_cut_v2.1.jpg"
+    },
+    "106": {
+      "name": "The Absurd v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/the_absurd_v2.jpg"
+    },
+    "107": {
+      "name": "Nightly v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/nightly_v2.jpg"
+    },
+    "108": {
+      "name": "Steampunk v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/steampunk_v2.jpg"
+    },
+    "109": {
+      "name": "Retro Sci-Fi v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/retro_sci-fi_v2.jpg"
+    },
+    "110": {
+      "name": "Simple Design v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/simple_design_v2.jpg"
+    },
+    "115": {
+      "name": "Dreamland v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/dreamland_v3.jpg"
+    },
+    "116": {
+      "name": "Abstract v2",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/abstract_v2.jpg"
+    },
+    "117": {
+      "name": "Anime v2.1",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/anime_v2.1.jpg"
+    },
+    "118": {
+      "name": "Figure v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/figure_v3.1.jpg"
+    },
+    "119": {
+      "name": "Monster v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/monster_v3.jpg"
+    },
+    "120": {
+      "name": "Baroque v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/baroque_v3.jpg"
+    },
+    "121": {
+      "name": "Dark Fantasy v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/dark_fantasy_v3.jpg"
+    },
+    "122": {
+      "name": "Ink v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/ink_v3.jpg"
+    },
+    "123": {
+      "name": "Horror v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/horror_v3.jpg"
+    },
+    "124": {
+      "name": "Whimsical v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/whimsical_v3.jpg"
+    },
+    "125": {
+      "name": "Festive v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/festive_v3.jpg"
+    },
+    "126": {
+      "name": "Anime v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/anime_v3.jpg"
+    },
+    "127": {
+      "name": "Comic v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/comic_v3.jpg"
+    },
+    "128": {
+      "name": "Cartoonist v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/cartoonist_v3.jpg"
+    },
+    "129": {
+      "name": "Sketch v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/sketch_v3.jpg"
+    },
+    "130": {
+      "name": "HDR v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/hdr_v3.jpg"
+    },
+    "131": {
+      "name": "Sticker v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/sticker_v3.jpg"
+    },
+    "132": {
+      "name": "Logo v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/logo_v3.jpg"
+    },
+    "133": {
+      "name": "Retro Pop v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/retro_pop_v3.jpg"
+    },
+    "134": {
+      "name": "Starry v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/starry_v3.jpg"
+    },
+    "135": {
+      "name": "Botany v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/botany_v3.jpg"
+    },
+    "136": {
+      "name": "Colored Tattoo v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/colored_tattoo_v3.jpg"
+    },
+    "137": {
+      "name": "Tattoo v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/tattoo_v3.jpg"
+    },
+    "138": {
+      "name": "Ukiyo-e v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/ukiyo-e_v3.jpg"
+    },
+    "139": {
+      "name": "Mechanical v3.0",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/mechanical_v3.0.jpg"
+    },
+    "140": {
+      "name": "Mechanical v3.1",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/mechanical_v3.1.jpg"
+    },
+    "144": {
+      "name": "Crochet v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/crochet_v3.jpg"
+    },
+    "145": {
+      "name": "Robots v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/robots_v3.jpg"
+    },
+    "147": {
+      "name": "Clay v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/clay_v3.jpg"
+    },
+    "148": {
+      "name": "Graffiti v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/graffiti_v3.jpg"
+    },
+    "150": {
+      "name": "Flat v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/flat_v3.jpg"
+    },
+    "151": {
+      "name": "Papercut v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/papercut_v3.jpg"
+    },
+    "154": {
+      "name": "Sepia v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/sepia_v3.jpg"
+    },
+    "155": {
+      "name": "Diorama v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/diorama_v3.jpg"
+    },
+    "156": {
+      "name": "Pastel v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/pastel_v3.jpg"
+    },
+    "157": {
+      "name": "Impressionism v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/impressionism_v3.jpg"
+    },
+    "158": {
+      "name": "Expressionism v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/expressionism_v3.jpg"
+    },
+    "159": {
+      "name": "Cartoon v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/cartoon_v3.jpg"
+    },
+    "161": {
+      "name": "Surrealism v3",
+      "image": "https://d3j730xi5ph1dq.cloudfront.net/dream/style_thumbnail/surrealism_v3.jpg"
+    },
+    "2000": {
+      "name": "Futurepunk V4",
+      "image": "https://i.ibb.co/sJSpPfv/fade1bc36acb.jpg"
+    },
+    "2001": {
+      "name": "Character V4",
+      "image": "https://i.ibb.co/6srqDfQ/f53259b9324e.jpg"
+    },
+    "2002": {
+      "name": "Cinematic V4",
+      "image": "https://i.ibb.co/HKrYTnZ/27b6e6ecb4c4.jpg"
+    },
+    "2005": {
+      "name": "Steampunk V4",
+      "image": "https://i.ibb.co/ngYHRpc/9ba8e61e6aab.jpg"
+    },
+    "2006": {
+      "name": "Fujifilm V4",
+      "image": "https://i.ibb.co/2qMLd31/e6e9190e2175.jpg"
+    },
+    "2008": {
+      "name": "Van Gogh V4",
+      "image": "https://i.ibb.co/0Q4D9Lr/19c23dbb9617.jpg"
+    },
+    "2009": {
+      "name": "Exprealism V4",
+      "image": "https://i.ibb.co/Y0tdbJv/a1a3bf6e31fb.jpg"
+    },
+    "2010": {
+      "name": "Zdzislaw V4",
+      "image": "https://i.ibb.co/dQTSzqt/df0c543d4d69.jpg"
+    },
+    "2011": {
+      "name": "Neonic V4",
+      "image": "https://i.ibb.co/QXW6C8m/ff0c543d4d22.jpg"
+    },
+    "2012": {
+      "name": "Complex System V4",
+      "image": "https://i.ibb.co/9YpHdRW/13ec639454a9.jpg"
+    },
+    "2013": {
+      "name": "Stick Logo V4",
+      "image": "https://i.ibb.co/64cnNDL/256455a6b961.jpg"
+    }
+  }
+}
